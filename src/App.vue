@@ -1,11 +1,22 @@
 <script setup>
 import { RouterView } from 'vue-router'
 import AppNavigation from './components/AppNavigation .vue'
+import AppFooter from './components/AppFooter.vue'
 </script>
 
 <template>
   <AppNavigation />
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
+  <AppFooter />
 </template>
 
-<style scoped></style>
+<style scoped>
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+</style>
